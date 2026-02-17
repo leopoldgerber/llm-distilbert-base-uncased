@@ -1,0 +1,26 @@
+[project]
+name = "llm-distilbert-base-uncased"
+version = "0.1.0"
+description = "Fine-tuning DistilBERT (distilbert-base-uncased) for binary sentiment classification and publishing to Hugging Face Hub."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "transformers>=4.40.0",
+  "datasets>=2.20.0",
+  "evaluate>=0.4.2",
+  "torch",
+  "scikit-learn>=1.4.0",
+  "accelerate>=0.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.6.0",
+  "pytest>=8.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
